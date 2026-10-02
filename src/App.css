@@ -1,0 +1,199 @@
+/* Mid City Gym - Custom Styles */
+
+/* =========================
+   Animations
+========================= */
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 59, 48, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(255, 59, 48, 0.6),
+                0 0 100px rgba(255, 59, 48, 0.2);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes shine {
+  from { transform: translateX(-100%) skewX(-25deg); }
+  to { transform: translateX(200%) skewX(-25deg); }
+}
+
+@keyframes bounce-vertical {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(10px); opacity: 0.5; }
+}
+
+@keyframes text-reveal {
+  from { clip-path: inset(0 100% 0 0); opacity: 0; }
+  to { clip-path: inset(0 0 0 0); opacity: 1; }
+}
+
+@keyframes whatsapp-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* =========================
+   Layout / UI Styles
+========================= */
+
+.hero-overlay {
+  background: linear-gradient(
+    105deg,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.80) 30%,
+    rgba(0, 0, 0, 0.50) 60%,
+    rgba(0, 0, 0, 0.20) 100%
+  );
+}
+
+.navbar-scrolled {
+  background: rgba(0, 0, 0, 0.92) !important;
+  backdrop-filter: blur(24px);
+  padding: 0.5rem 0 !important;
+  box-shadow: 0 4px 30px rgba(255, 59, 48, 0.08);
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: skewX(-25deg);
+}
+
+.btn-shine:hover::before {
+  animation: shine 0.5s ease-in-out;
+}
+
+/* =========================
+   Cards
+========================= */
+
+.service-card {
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  border-color: rgba(255, 59, 48, 0.4);
+  box-shadow: 0 0 40px rgba(255, 59, 48, 0.15),
+              inset 0 0 40px rgba(255, 59, 48, 0.03);
+  transform: translateY(-6px);
+}
+
+.membership-popular {
+  border-color: rgba(255, 59, 48, 0.5);
+  box-shadow: 0 0 50px rgba(255, 59, 48, 0.25),
+              0 0 100px rgba(255, 59, 48, 0.1);
+}
+
+/* =========================
+   Trainer / Gallery
+========================= */
+
+.trainer-card:hover .trainer-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(255, 59, 48, 0.8),
+    rgba(0, 0, 0, 0.6),
+    transparent
+  );
+}
+
+.gallery-item img {
+  transition: 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* =========================
+   Misc UI
+========================= */
+
+.counter-value {
+  text-shadow: 0 0 20px rgba(255, 59, 48, 0.4);
+}
+
+.scroll-indicator {
+  animation: bounce-vertical 1.5s infinite;
+}
+
+.whatsapp-btn {
+  animation: whatsapp-pulse 2s infinite;
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 59, 48, 0.3),
+    transparent
+  );
+}
+
+.gym-input:focus {
+  border-color: rgba(255, 59, 48, 0.5) !important;
+  box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.15);
+  outline: none;
+}
+
+/* =========================
+   Badge / UI Tags
+========================= */
+
+.red-badge {
+  background: rgba(255, 59, 48, 0.15);
+  border: 1px solid rgba(255, 59, 48, 0.3);
+  color: #ff3b30;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* =========================
+   Testimonials
+========================= */
+
+.testimonial-card {
+  transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+  border-color: rgba(255, 59, 48, 0.3);
+  transform: translateY(-4px);
+}
