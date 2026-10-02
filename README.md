@@ -257,6 +257,26 @@ If you intend to reuse or distribute the project commercially, please contact th
 
 ---
 
+# 👨‍💻 Author
+
 <p align="center">
-  Built with ❤️ using React, Vite and Tailwind CSS
+  <strong>Adil Raj</strong>
+  <br>
+  Software Engineering Aspirant | Full-Stack Developer | AI & Cybersecurity | Building Scalable Software & Real-World Solutions
+  <br><br>
+  <a href="https://github.com/adilraj786">
+    <img src="https://img.shields.io/badge/GitHub-adilraj786-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+</p>
+
+<p align="center">
+  <sub>Building practical software solutions with modern web technologies.</sub>
+</p>
+
+---
+
+<p align="center">
+  <strong>© 2026 Adil Raj</strong>
+  <br>
+  <sub>Built with React, Node.js, Firebase, Stripe & Cloudinary.</sub>
 </p>
